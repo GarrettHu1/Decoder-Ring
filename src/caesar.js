@@ -24,10 +24,7 @@ const caesarModule = (function () {
     if(!shift || shift === 0 || shift < -25 || shift > 25) {
       return false;
     }
-    const newMessage = [];
-    //allow for negative shift that moves to left  
-    //if number is negative, shift by abs(shift)   
-   // if(Math.sign(shift) === -1) {encode = false}   
+    const newMessage = [];  
     if(!encode) { shift = -shift}
     for (let i = 0; i < input.length; i++) {
         if (alphabet.includes(input[i].toLowerCase())) {
@@ -45,11 +42,7 @@ const caesarModule = (function () {
       }console.log(newMessage.join(''))
       return newMessage.join('');
     } // function caesar end
-    
-  
-  
-    // your solution code here
-    //if there is no shift, or shift amount is <-25 or >90, return false
+
 /*    if (!shift || shift === 0 || shift < -25 || shift > 25) return false
     //split input string into array
     let inputArray = input.split("")
