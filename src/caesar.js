@@ -8,17 +8,6 @@ const caesarModule = (function () {
   
   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   
-  //should shift certain amount of places, A -> D, M -> K
-  //positive moves forward down alphabet
-  //negative moves backwards up alphabet
-  //spaces should be maintained
-  //capitals can be ignored
-  //if a letter is shifted past alphabet (0 / 26), should wrap back around
-    //-use +26 if shifting back -26 shifting forward
-      //make number always positive
-  //set input toLowerCase
-    // make default alphabet = [], use index place to assign alphabet to a #
-  
   function caesar(input, shift, encode = true) {
     
     if(!shift || shift === 0 || shift < -25 || shift > 25) {
@@ -42,40 +31,7 @@ const caesarModule = (function () {
       }console.log(newMessage.join(''))
       return newMessage.join('');
     } // function caesar end
-
-/*    if (!shift || shift === 0 || shift < -25 || shift > 25) return false
-    //split input string into array
-    let inputArray = input.split("")
-    let newArray = []
-    //loop through input, loop through alphabet, if matches input[i] = alphabet[j] 
-    for (let i = 0; i < inputArray.length; i++) {
-      for( let j = 0; j < alphabet.length; j++) {
-        const inputLetter = alphabet.indexOf(alphabet[j])
-        if(inputArray[i].toLowerCase === alphabet[j]){ 
-          let newVar = alphabet.indexOf(alphabet[j])
-          newArray.push(newVar)
-        }
-        //if inputArray[i] is a space (===' '), keep the space
-      } // j loop
-      
-    } //i looop
-    console.log(newArray)
-    */
- 
-    //loop through newMessage, 
     
-/*    for(let k = 0; k < newMessage.length; k++) {
-      if (newMessage[k] < 0 +26) newMessage[k] +26;
-        if (newMessage[k] > 26) newMessage[k] - 26;
-      //modArray[] = alpabet[modarray[]]
-       newMessage[k] = alphabet[newMessage[k]]
-    }   
-    return inputArray.join("")
-*/    
-    
-    
-    
-
   return {
     caesar,
   };
