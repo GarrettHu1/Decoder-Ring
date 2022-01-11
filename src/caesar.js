@@ -7,7 +7,14 @@ const caesarModule = (function () {
   // you can add any code you want within this function scope
   
   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  
+  //set input toLowerCase
+  //should shift certain amount of places, A -> D, M -> K
+  //positive moves forward down alphabet
+  //negative moves backwards up alphabet
+  //spaces should be maintained
+  //capitals can be ignored
+  //if a letter is shifted past alphabet (0 / 26), should wrap back around
+  //-use +26 if shifting back -26 shifting forward
   function caesar(input, shift, encode = true) {
     
     if(!shift || shift === 0 || shift < -25 || shift > 25) {
